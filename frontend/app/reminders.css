@@ -1,0 +1,11 @@
+.reminders-shell { width: min(74rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem 5rem; }
+.reminders-intro { max-width: 48rem; margin-bottom: 2rem; }
+.reminders-intro h1 { max-width: 14ch; font-size: clamp(2.2rem, 7vw, 4.2rem); }
+.reminders-grid { display: grid; gap: 1rem; }
+.reminder-panel, .reminder-list { padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; background: white; }
+.reminder-panel { display: grid; gap: .7rem; }
+.reminder-panel input, .reminder-panel select { min-height: 2.8rem; padding: .65rem .75rem; border: 1px solid #cfe1de; border-radius: .55rem; }
+.reminder-list article { margin-top: .7rem; padding: .9rem; background: #f7fbfa; border: 1px solid #dce9e7; border-radius: .6rem; }
+.reminder-list span { color: var(--teal); font-size: .75rem; font-weight: 850; text-transform: capitalize; }
+.reminder-list button { margin-right: .5rem; padding: .55rem .75rem; border: 1px solid #cfe1de; border-radius: .5rem; background: white; }
+@media (min-width: 58rem) { .reminders-grid { grid-template-columns: 20rem minmax(0, 1fr); align-items: start; } }

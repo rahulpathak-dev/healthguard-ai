@@ -1,0 +1,21 @@
+{
+  "name": "healthguard-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose up --build",
+    "up": "docker compose up -d --build",
+    "down": "docker compose down",
+    "logs": "docker compose logs -f",
+    "build": "docker compose build",
+    "test": "npm --prefix frontend test",
+    "lint": "npm --prefix frontend run lint",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "type-check": "npm --prefix frontend run typecheck",
+    "frontend:build": "npm --prefix frontend run build",
+    "backend:lint": "cd backend && ruff check .",
+    "backend:typecheck": "cd backend && mypy app",
+    "backend:test": "cd backend && pytest",
+    "backend:migrate": "cd backend && alembic upgrade head"
+  }
+}

@@ -1,0 +1,1 @@
+"""Verified medicine information module."""

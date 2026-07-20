@@ -1,0 +1,49 @@
+.profiles-shell { width: min(72rem, calc(100% - 2rem)); min-height: 72vh; margin: auto; padding-block: 3rem 5rem; }
+.profiles-heading { display: grid; gap: 1.5rem; align-items: end; margin-bottom: 2rem; }
+.profiles-heading h1 { max-width: 18ch; font-size: clamp(2.2rem, 7vw, 4rem); }
+.profiles-heading p { max-width: 43rem; color: var(--muted); }
+.profile-actions, .form-buttons { display: flex; flex-wrap: wrap; gap: .65rem; }
+.profile-actions button, .form-buttons button { min-height: 2.75rem; padding: .65rem 1rem; color: white; background: var(--teal); border: 1px solid var(--teal); border-radius: .55rem; font-weight: 750; cursor: pointer; }
+.profile-actions .button-secondary, .form-buttons .button-secondary { color: var(--teal); background: white; }
+.profile-actions .danger-button { color: #8a3227; background: #fff3f0; border-color: #e6b5ad; }
+.profile-switcher { display: flex; gap: .7rem; margin: 1.5rem 0; padding: .35rem 0 .7rem; overflow-x: auto; scroll-snap-type: x proximity; }
+.profile-switcher > button { flex: 0 0 12rem; display: flex; align-items: center; gap: .65rem; padding: .75rem; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: .8rem; text-align: left; cursor: pointer; scroll-snap-align: start; }
+.profile-switcher > button.active { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(8, 125, 114, .12); }
+.profile-switcher b, .profile-switcher small { display: block; }
+.profile-switcher small { color: var(--muted); }
+.profile-avatar { flex: 0 0 auto; width: 2.7rem; height: 2.7rem; display: grid; place-items: center; color: white; background: linear-gradient(145deg, var(--blue), var(--teal)); border-radius: 50%; font-size: .8rem; font-weight: 800; }
+.profile-title .profile-avatar { width: 4.2rem; height: 4.2rem; font-size: 1.1rem; }
+.profile-detail { display: grid; gap: 1rem; }
+.profile-summary-card, .record-card, .profile-form, .empty-profiles { padding: 1.25rem; background: white; border: 1px solid var(--line); border-radius: 1rem; }
+.profile-title { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.3rem; }
+.profile-title span { color: var(--muted); font-size: .72rem; font-weight: 700; text-transform: uppercase; }
+.profile-title h2 { margin: .1rem 0; font-size: 1.8rem; }
+.profile-title p { margin: 0; color: var(--muted); }
+.profile-facts { display: grid; gap: .75rem; margin: 1.5rem 0 0; }
+.profile-facts div { padding-top: .75rem; border-top: 1px solid var(--line); }
+.profile-facts dt { color: var(--muted); font-size: .68rem; font-weight: 750; text-transform: uppercase; }
+.profile-facts dd { margin: .15rem 0 0; }
+.health-record-grid { display: grid; gap: 1rem; }
+.record-card h3 { font-size: 1rem; }
+.record-card p, .record-card small { color: var(--muted); }
+.record-card ul { margin: 0; padding-left: 1.2rem; }
+.record-card li { margin: .25rem 0; }
+.profile-form { display: grid; gap: 2rem; }
+.profile-form section { padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+.profile-form section > p { color: var(--muted); }
+.profile-form h2 { font-size: 1.35rem; }
+.form-grid { display: grid; gap: 1rem; }
+.form-grid label { color: var(--ink); font-size: .8rem; font-weight: 750; }
+.form-grid label > span { color: var(--muted); font-size: .68rem; font-weight: 500; }
+.form-grid input, .form-grid select, .form-grid textarea { width: 100%; min-height: 2.8rem; display: block; margin-top: .35rem; padding: .6rem .7rem; color: var(--ink); background: white; border: 1px solid #bfd4d1; border-radius: .5rem; }
+.form-grid textarea { resize: vertical; }
+.privacy-options { display: grid; gap: .7rem; padding: 1rem; border: 1px solid var(--line); border-radius: .7rem; }
+.privacy-options legend { padding: 0 .4rem; color: var(--navy); font-weight: 800; }
+.privacy-options label { display: flex; gap: .6rem; align-items: flex-start; }
+.privacy-options input { margin-top: .3rem; }
+.privacy-options p { margin: 0; color: var(--muted); font-size: .72rem; }
+.empty-profiles { max-width: 34rem; margin: 3rem auto; text-align: center; }
+.empty-profiles .profile-avatar { margin: 0 auto 1rem; }
+.profile-status { min-height: 60vh; display: grid; place-items: center; }
+@media (min-width: 42rem) { .profiles-heading { grid-template-columns: 1fr auto; } .form-grid { grid-template-columns: 1fr 1fr; } .full-field { grid-column: 1 / -1; } .profile-facts { grid-template-columns: repeat(3, 1fr); } .health-record-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 64rem) { .profiles-shell { padding-block: 5rem 7rem; } .profile-detail { grid-template-columns: .8fr 1.2fr; } .profile-summary-card, .record-card, .profile-form { padding: 1.6rem; } }

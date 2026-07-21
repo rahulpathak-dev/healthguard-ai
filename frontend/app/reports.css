@@ -1,12 +1,60 @@
-.reports-shell { width: min(74rem, calc(100% - 2rem)); margin-inline: auto; padding-block: 3rem 5rem; }
-.reports-intro { max-width: 48rem; margin-bottom: 2rem; }
-.reports-intro h1 { max-width: 14ch; font-size: clamp(2.2rem, 7vw, 4.2rem); }
-.reports-intro p:last-child { color: var(--muted); }
-.reports-grid { display: grid; gap: 1rem; }
-.report-panel, .report-result { padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; background: white; }
-.report-panel { display: grid; gap: .7rem; align-content: start; }
-.report-panel select, .report-panel button { min-height: 2.8rem; }
-.report-panel button:not(.button), .report-result button { padding: .7rem; text-align: left; border: 1px solid #dce9e7; border-radius: .55rem; background: #f7fbfa; }
-.report-panel small, .report-status { display: block; color: var(--muted); }
-.report-status { color: var(--teal); font-weight: 850; text-transform: uppercase; }
-@media (min-width: 64rem) { .reports-grid { grid-template-columns: 18rem minmax(0, 1fr) 20rem; align-items: start; } }
+.reports-shell {
+  width: min(74rem, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: 3rem 5rem;
+}
+.reports-intro {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+.reports-intro h1 {
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+}
+.reports-intro p:last-child {
+  color: var(--muted);
+}
+.reports-grid {
+  display: grid;
+  gap: 1rem;
+}
+.report-panel,
+.report-result {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: white;
+}
+.report-panel {
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+.report-panel select,
+.report-panel button {
+  min-height: 2.8rem;
+}
+.report-panel button:not(.button),
+.report-result button {
+  padding: 0.7rem;
+  text-align: left;
+  border: 1px solid #dce9e7;
+  border-radius: 0.55rem;
+  background: #f7fbfa;
+}
+.report-panel small,
+.report-status {
+  display: block;
+  color: var(--muted);
+}
+.report-status {
+  color: var(--teal);
+  font-weight: 850;
+  text-transform: uppercase;
+}
+@media (min-width: 64rem) {
+  .reports-grid {
+    grid-template-columns: 18rem minmax(0, 1fr) 20rem;
+    align-items: start;
+  }
+}

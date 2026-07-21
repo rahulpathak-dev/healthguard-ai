@@ -17,5 +17,8 @@ export const messages = {
 } satisfies Record<Locale, Record<string, string>>;
 
 export function formatDateTime(value: string | Date, locale: Locale = "en") {
-  return new Intl.DateTimeFormat(locale === "hi" ? "hi-IN" : "en-US", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value));
+  return new Intl.DateTimeFormat(locale === "hi" ? "hi-IN" : "en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(new Date(value));
 }

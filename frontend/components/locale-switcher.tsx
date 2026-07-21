@@ -18,8 +18,13 @@ export function LocaleSwitcher() {
     document.documentElement.lang = next;
   }
   return (
-    <label className="locale-switcher">Language
-      <select value={locale} onChange={(event) => change(event.target.value as Locale)} aria-label="Choose language">
+    <label className="locale-switcher">
+      Language
+      <select
+        value={locale}
+        onChange={(event) => change(event.target.value as Locale)}
+        aria-label="Choose language"
+      >
         <option value="en">English</option>
         <option value="hi">??????</option>
       </select>

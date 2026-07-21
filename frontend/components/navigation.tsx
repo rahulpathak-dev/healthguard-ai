@@ -29,18 +29,25 @@ export function Navigation() {
     <header className="site-header">
       <div className="nav-shell">
         <Link className="brand" href="/" aria-label="HealthGuard AI home">
-          <span className="brand-mark" aria-hidden="true">+</span>
-          <span>HealthGuard <b>AI</b></span>
+          <span className="brand-mark" aria-hidden="true">
+            +
+          </span>
+          <span>
+            HealthGuard <b>AI</b>
+          </span>
         </Link>
         <nav aria-label="Primary navigation">
-          {links.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
+          {links.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <LocaleSwitcher />
-        <Link className="button button-small" href="/auth/login">Sign in</Link>
+        <Link className="button button-small" href="/auth/login">
+          Sign in
+        </Link>
       </div>
     </header>
   );
 }
-
-
-

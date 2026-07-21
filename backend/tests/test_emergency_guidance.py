@@ -1,4 +1,4 @@
-﻿from app.emergency.content import TOPICS
+from app.emergency.content import TOPICS
 
 
 def test_every_emergency_topic_puts_immediate_action_first() -> None:
@@ -17,4 +17,3 @@ def test_chest_pain_and_stroke_are_not_vague() -> None:
     assert "Call 112 now" in chest.immediate_action
     assert "Call 112 now" in stroke.immediate_action
     assert "Do not drive yourself." in chest.do_not
-

@@ -5,6 +5,8 @@ import { Navigation } from "@/components/navigation";
 describe("Navigation", () => {
   it("identifies the primary navigation", () => {
     render(<Navigation />);
-    expect(screen.getByRole("navigation", { name: /primary/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("navigation", { name: /primary/i }),
+    ).toBeInTheDocument();
   });
 });

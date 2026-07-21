@@ -3,7 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 const protectedPaths = ["/account", "/dashboard", "/profiles", "/chat"];
 
 export function middleware(request: NextRequest) {
-  const isProtected = protectedPaths.some((path) => request.nextUrl.pathname.startsWith(path));
+  const isProtected = protectedPaths.some((path) =>
+    request.nextUrl.pathname.startsWith(path),
+  );
   const hasAccessCookie = request.cookies.has("hg_access");
   if (isProtected && !hasAccessCookie) {
     const login = new URL("/auth/login", request.url);
@@ -16,4 +18,12 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-export const config = { matcher: ["/account/:path*", "/dashboard/:path*", "/profiles/:path*", "/chat/:path*", "/auth/login"] };
+export const config = {
+  matcher: [
+    "/account/:path*",
+    "/dashboard/:path*",
+    "/profiles/:path*",
+    "/chat/:path*",
+    "/auth/login",
+  ],
+};

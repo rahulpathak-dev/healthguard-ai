@@ -1,1 +1,2 @@
-export const MEDICAL_DISCLAIMER = "HealthGuard AI provides educational information only and does not replace professional medical advice, diagnosis, or treatment. In an emergency, contact local emergency services immediately.";
+export const MEDICAL_DISCLAIMER =
+  "HealthGuard AI provides educational information only and does not replace professional medical advice, diagnosis, or treatment. In an emergency, contact local emergency services immediately.";

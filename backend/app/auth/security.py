@@ -2,7 +2,7 @@ import hashlib
 import secrets
 import uuid
 from datetime import UTC, datetime, timedelta
-from typing import Any, cast
+from typing import Any
 
 import jwt
 from pwdlib import PasswordHash
@@ -60,4 +60,4 @@ def decode_access_token(token: str) -> dict[str, Any]:
     )
     if payload.get("type") != "access" or payload.get("role") not in {r.value for r in UserRole}:
         raise jwt.InvalidTokenError("Invalid token claims")
-    return cast(dict[str, Any], payload)
+    return payload

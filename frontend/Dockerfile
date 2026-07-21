@@ -1,15 +1,15 @@
-FROM node:22.15.0-alpine AS dependencies
+FROM node:22.17.1-alpine AS dependencies
 WORKDIR /app
 COPY package.json ./
 RUN npm install --ignore-scripts
-FROM node:22.15.0-alpine AS builder
+FROM node:22.17.1-alpine AS builder
 WORKDIR /app
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 ARG NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
-FROM node:22.15.0-alpine AS runner
+FROM node:22.17.1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 PORT=3000 HOSTNAME=0.0.0.0
 RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
